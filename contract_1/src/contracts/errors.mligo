@@ -1,0 +1,7 @@
+let not_admin : string = "Access denied."
+let admin_not_exist : string = "This address is not an Admin."
+let empty_invitation : string = "You haven't been invited yet."
+let already_accepted : string = "You already accepted the invitation"
+let already_refused : string = "You already refused the invitation"
+let not_enough_money : string = "You don't have enough money"
+let validation_uncompleted : string = "You first need to pay 1 tez to participate"
