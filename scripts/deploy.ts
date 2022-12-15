@@ -1,7 +1,7 @@
 import { buf2hex } from "@taquito/utils";
 import { InMemorySigner } from "@taquito/signer";
 import { MichelsonMap, TezosToolkit } from "@taquito/taquito";
-import code from "../src/compiled/main.json";
+import code from "../contract_1/src/compiled/main.json";
 import dotenv from "dotenv";
 import metadata from "./metadata/main.json";
 import path from "path";
