@@ -2,7 +2,7 @@ ifndef LIGO
     LIGO = docker run --rm -v "${PWD}":"${PWD}" -w "${PWD}" ligolang/ligo:0.57.0
 endif
 
-compile = $(LIGO) compile contract ./contract_1/src/contracts/$(1) -o ./contract_1/src/compiled/$(2) $(3)
+compile = $(LIGO) compile contract $(1) -o $(2) $(3)
 testing = $(LIGO) run test ./contract_1/tests/$(1)
 
 default: help
@@ -28,8 +28,9 @@ clean:
 
 compile: 
 	@echo "Compiling Main contract..."
-	@$(call compile,main.mligo,main.tz)
-	@$(call compile,main.mligo,main.json,--michelson-format json)
+	@$(call compile,./contract_1/src/contracts/main.mligo,./contract_1/src/compiled/main.tz)
+	@$(call compile,./contract_2/src/contracts/main.mligo,./contract_2/src/compiled/main.tz)
+	@$(call compile,./contract_1/src/contracts/main.mligo,./contract_1/src/compiled/main.json,--michelson-format json)
 	@echo "Compiled successfully"
 
 deploy-contract:
