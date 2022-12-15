@@ -30,8 +30,8 @@ compile:
 	@echo "Compiling Main contract..."
 	@$(call compile,./contract_1/src/contracts/main.mligo,./contract_1/src/compiled/main.tz)
 	@$(call compile,./contract_1/src/contracts/main.mligo,./contract_1/src/compiled/main.json,--michelson-format json)
-	@$(call compile,./contract_2/src/contracts/main.mligo,./contract_2/src/compiled/main2.tz)
-	@$(call compile,./contract_2/src/contracts/main.mligo,./contract_2/src/compiled/main2.json,--michelson-format json)
+	@$(call compile,./contract_2/src/contracts/main.mligo,./contract_2/src/compiled/main.tz)
+	@$(call compile,./contract_2/src/contracts/main.mligo,./contract_2/src/compiled/main.json,--michelson-format json)
 	@echo "Compiled successfully"
 
 deploy-contract:
