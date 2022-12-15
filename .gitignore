@@ -3,6 +3,7 @@
 
 .ligo
 .ligo-work
-src/compiled/*
+contract_1/src/compiled/*
+contract_2/src/compiled/*
 
 node_modules
